@@ -51,6 +51,6 @@ python predict.py --text "This movie was amazing!"
 
 ## 📄 Project Report
 
-👉 [Click to view the full report](https://github.com/turdalievargen32/BERT_NLP_proj/blob/main/report1.pdf)
+👉 [Click to view the full report](https://github.com/turdalievargen32/BERT_NLP_proj/blob/main/src/report1.pdf)
 
     
