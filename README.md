@@ -47,5 +47,10 @@ python predict.py --text "This movie was amazing!"
 
     SHAP (shap_explain.py): Visualize feature importance
 
-    LIME (lime_explain.py): Understand individual predictions
+    LIME (lime_explain.py): Understand individual predictions 
+
+## 📄 Project Report
+
+👉 [Click to view the full report](https://github.com/turdalievargen32/BERT_NLP_proj/blob/main/report1.pdf)
+
     
