@@ -1,61 +1,43 @@
-# BERT-based Sentiment Analysis Project
+# 🧠 Sentiment Analysis with BERT
 
-This project demonstrates a complete pipeline for **sentiment analysis** using a fine-tuned BERT model. It includes training, evaluation, SHAP-based explainability, and attention visualization.
+This project implements a **Sentiment Analysis** pipeline using a fine-tuned BERT model (`bert-base-uncased`) for classifying text data into **positive**, **negative**, or **neutral** sentiments. It combines powerful **transformer-based modeling** with modern tools for **training**, **evaluation**, **visualization**, and **interpretability**.
 
-## 📌 Project Features
+## 🚀 Features
 
-- **Model:** BERT (`bert-base-uncased`)
-- **Task:** Binary sentiment classification (`Positive` vs `Negative`)
-- **Explainability:** SHAP values for token-level interpretation
-- **Visualization:** Confusion matrix, classification report, attention heatmap
+- ✅ Fine-tuning BERT for sequence classification using Hugging Face Transformers  
+- ✅ Clean, configurable training and evaluation workflow  
+- ✅ Sentiment prediction on custom texts  
+- ✅ Performance metrics (accuracy, precision, recall, F1)  
+- ✅ Visualization tools (ROC curve, confusion matrix, SHAP, LIME)  
+- ✅ Easy error analysis and explainability  
 
----
+## 📁 Project Structure
 
-## ✅ Evaluation Results
+BERT_NLP_proj/
+│
+├── train.py               # Script to fine-tune BERT model
+├── evaluate.py            # Script to evaluate model performance
+├── predict.py             # Predict sentiment for new input
+├── dataset.py             # Dataset loading and preprocessing
+├── error_analysis.py      # Tools for misclassification analysis
+├── shap_explain.py        # SHAP explainability
+├── lime_explain.py        # LIME interpretability
+├── utils.py               # Helper functions
+├── requirements.txt       # Python dependencies
+├── report.pdf             # 📄 Final project report (see below)
+└── README.md              # Project documentation
 
-### Confusion Matrix
+## Usage
 
-![Confusion Matrix](./confusion_matrix.png)
+python train.py
 
-- True Negatives (TN): 10,952
-- False Positives (FP): 1,548
-- False Negatives (FN): 1,307
-- True Positives (TP): 11,193
+python evaluate.py
 
----
+python predict.py --text "This movie was amazing!"
 
-### Classification Report
+ Explainability Tools
 
-![Classification Report](./classification_report_precise.png)
+    SHAP (shap_explain.py): Visualize feature importance
 
-- **Accuracy:** 89%
-- **Precision (Negative):** 90%  
-- **Precision (Positive):** 88%  
-- **Recall (Negative):** 88%  
-- **Recall (Positive):** 90%  
-- **F1-score (both classes):** 0.89
-
----
-
-## 🔍 SHAP Explanation Example
-
-![SHAP Analysis](./Screenshot\ from\ 2025-05-23\ 17-56-35.png)
-
-The word **"disappointing"** had the most negative impact on the sentiment classification, contributing `-0.962` to the negative class.
-
----
-
-## 🧠 BERT Attention Heatmap
-
-![Attention Heatmap](./Attention_heatmap.png)
-
-This heatmap shows how the BERT model allocates attention across the sentence tokens in the **last layer** by averaging all heads.
-
----
-
-## 💻 How to Run
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/turdalievargen32/BERT_NLP_proj.git
-   cd BERT_NLP_proj
+    LIME (lime_explain.py): Understand individual predictions
+    
